@@ -1,6 +1,6 @@
 # CluraEnclosure
 
-**CluraEnclosure** is the 100% open-source, modular, and smart enclosure designed for desktop 3D printers. Developed with a focus on safety and air quality, it incorporates active filtration and smart sensors to enhance your 3D printing experience.
+**The Clura Enclosure** is the 100% open-source, modular, and smart enclosure designed for desktop 3D printers. Developed with a focus on safety and air quality, it incorporates active filtration and smart sensors to enhance your 3D printing experience.
 
 ## Project Status
 
@@ -9,7 +9,7 @@
 
 ## Documentation
 
-All project documentation, including assembly manuals and Bills of Materials (BOM), will be published on **CluraDocs**. 
+All project documentation, including assembly manuals and Bills of Materials (BOM), will also be published on **CluraDocs**. If you're looking to assemble your own Clura Enclosure, that is the place to go.
 
 CluraDocs will be live soon at: [https://www.clura.dev/cluradocs](https://www.clura.dev/cluradocs)
 
@@ -26,6 +26,12 @@ CluraDocs will be live soon at: [https://www.clura.dev/cluradocs](https://www.cl
 - `Firmware/`: Firmware for the screen and PCB controller.
 - `CAD/`: CAD models for various components (PE1, ME1, BE1).
 - `Production/`: Ready-to-use production files (3D prints, laser cutting, extrusions, PCBs).
+
+## License
+
+Every file in this repository is released under the **CC-NC (Creative Commons Non-Commercial)** license. 
+
+For more details on the reasoning behind this choice, you can read our blog post: [The License - Clura Blog](https://www.clura.dev/blog/the-license)
 
 ---
 *For more information, visit [clura.dev](https://www.clura.dev).*
