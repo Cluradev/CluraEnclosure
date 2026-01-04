@@ -1,0 +1,22 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# CAD/CAM Temporary Files
+*.tmp
+*.bak
+*.log
+*.err
+*.swp
+
+# Firmware Build Artifacts
+build/
+bin/
+*.hex
+*.bin
+*.elf
+*.map
+
+# Production Artifacts
+# Add specific production exports to ignore if needed
+# *.gcode
