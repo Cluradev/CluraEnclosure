@@ -1,0 +1,5 @@
+../Core/Src/A_SmokeSensor.cpp:8:1:A_SmokeSensor::A_SmokeSensor(GPIO_TypeDef*, uint16_t, ADC_HandleTypeDef*, uint32_t, uint16_t, int)	24	static
+../Core/Src/A_SmokeSensor.cpp:16:6:void A_SmokeSensor::begin()	40	static
+../Core/Src/A_SmokeSensor.cpp:24:10:uint32_t A_SmokeSensor::readRaw()	48	static
+../Core/Src/A_SmokeSensor.cpp:48:6:bool A_SmokeSensor::isSmokeDetected()	16	static
+../Core/Src/A_SmokeSensor.cpp:52:1:A_SmokeSensor::~A_SmokeSensor()	16	static

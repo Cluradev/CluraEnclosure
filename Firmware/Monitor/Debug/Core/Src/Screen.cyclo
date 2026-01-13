@@ -1,0 +1,20 @@
+../Core/Src/Screen.cpp:8:1:Screen::Screen(UART_HandleTypeDef*)	1
+../Core/Src/Screen.cpp:11:1:Screen::~Screen()	1
+../Core/Src/Screen.cpp:14:6:void Screen::init()	1
+../Core/Src/Screen.cpp:20:13:ScreenEvent Screen::readData(const char*)	2
+../Core/Src/Screen.cpp:38:6:void Screen::setDim(int)	2
+../Core/Src/Screen.cpp:45:6:void Screen::off()	1
+../Core/Src/Screen.cpp:49:6:void Screen::sendCommand(const char*)	1
+../Core/Src/Screen.cpp:55:6:void Screen::setPage(uint8_t, MachineState&)	1
+../Core/Src/Screen.cpp:61:6:void Screen::setPic(const char*, int)	1
+../Core/Src/Screen.cpp:67:6:void Screen::setText(const char*, const char*)	1
+../Core/Src/Screen.cpp:72:6:void Screen::setText(const char*, int)	1
+../Core/Src/Screen.cpp:77:6:void Screen::setVal(const char*, int)	1
+../Core/Src/Screen.cpp:82:6:void Screen::setAph(const char*, int)	1
+../Core/Src/Screen.cpp:87:6:void Screen::setText(const char*, long int)	1
+../Core/Src/Screen.cpp:93:6:void Screen::setButtonState(const char*, bool)	2
+../Core/Src/Screen.cpp:98:6:void Screen::setCheckboxState(int, bool)	2
+../Core/Src/Screen.cpp:103:6:void Screen::setButtonState(int, bool)	2
+../Core/Src/Screen.cpp:109:6:void Screen::sendData(const char*)	1
+../Core/Src/Screen.cpp:112:6:void Screen::sendData(int)	3
+../Core/Src/Screen.cpp:125:6:void Screen::sendEnd()	1

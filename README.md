@@ -9,9 +9,9 @@
 
 ## Documentation
 
-All project documentation, including assembly manuals and Bills of Materials (BOM), will also be published on **CluraDocs**. If you're looking to assemble your own Clura Enclosure, that is the place to go.
+All project documentation, including assembly manuals and Bills of Materials (BOM), will also be published on **CluraDocs**. If you're looking to assemble your own Clura Enclosure, that is the place to go. Note: CluraDocs is still a work in progress, we are always working on improving it. If you have any suggestions or feedback, please let us know!
 
-CluraDocs will be live soon at: [https://www.clura.dev/cluradocs](https://www.clura.dev/cluradocs)
+Check it out here: [CluraDocs](https://www.clura.dev/cluradocs)
 
 ## Key Features
 
@@ -26,6 +26,8 @@ CluraDocs will be live soon at: [https://www.clura.dev/cluradocs](https://www.cl
 - `Firmware/`: Firmware for the screen and PCB controller.
 - `CAD/`: CAD models for various components (PE1, ME1, BE1).
 - `Production/`: Ready-to-use production files (3D prints, laser cutting, extrusions, PCBs).
+
+In each folder there is a readme file with more info.
 
 ## License
 
