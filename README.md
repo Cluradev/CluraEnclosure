@@ -6,12 +6,20 @@
 
 ## Why We Built It
 
-The project started with me (fabrizio), an aerospace engineering student who wanted to print in his room without destroying his lungs. Infact, it is widely documented that most 3d printer filaments emits VOCs and particulate matter in the air which is harmful to one's health. I searched for a smart, affordable, open source enclosure but couldn't find one, so I decided to build my own. 18 Months of hard work later, here we are! 
+The project started with me (Fabrizio), an aerospace engineering student who wanted to print in his room without compromising his safety. In fact, it is widely documented that most 3D printer filaments emit VOCs and particulate matter, which can be harmful to health. I searched for a smart, affordable, open-source enclosure but couldn't find one, so I decided to build my own. 18 months of hard work later, here we are!
+
+## Support the Project on Kickstarter
+
+We are currently gearing up for the Kickstarter launch of the Clura Enclosure kit! If you are interested in supporting the project, please consider pledging on Kickstarter. This is your opportunity to get a complete enclosure kit at a discounted price, saving you the time and effort of self-sourcing all the components yourself.
+
+**Guarantee an additional $20 off:** Reserve your Clura today with a $3.14 refundable deposit.
+[Reserve Yours](https://www.clura.dev/vipsignup) | [Check out the Kickstarter](https://www.kickstarter.com/projects/clura/enclosure)
 
 ## Project Status
 
 > [!NOTE]
 > **Files are currently being organized and will be uploaded soon.** We are working hard to prepare all CAD, firmware, and documentation for the initial release.
+
 
 ## Documentation
 
