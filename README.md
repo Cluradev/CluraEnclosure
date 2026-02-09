@@ -2,6 +2,12 @@
 
 **The Clura Enclosure** is the 100% open-source, modular, and smart enclosure designed for desktop 3D printers. Developed with a focus on safety and air quality, it incorporates active filtration and smart sensors to enhance your 3D printing experience.
 
+![Clura Enclosure](IntroPicture.avif)
+
+## Why We Built It
+
+The project started with me (fabrizio), an aerospace engineering student. I wanted
+
 ## Project Status
 
 > [!NOTE]
@@ -19,6 +25,8 @@ Check it out here: [CluraDocs](https://www.clura.dev/cluradocs)
 - **Smart Controls:** Integrated 4.3" touchscreen for real-time monitoring of temperature, humidity, and air quality.
 - **Modular Design:** Fully customizable hardware and software modules.
 - **Open Source:** 100% open source CAD files, firmware, and guides.
+
+![Clura Enclosure Features](FeaturesPictures.avif)
 
 ## Repository Structure
 
