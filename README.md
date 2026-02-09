@@ -6,7 +6,7 @@
 
 ## Why We Built It
 
-The project started with me (fabrizio), an aerospace engineering student. I wanted
+The project started with me (fabrizio), an aerospace engineering student who wanted to print in his room without destroying his lungs. Infact, it is widely documented that most 3d printer filaments emits VOCs and particulate matter in the air which is harmful to one's health. I searched for a smart, affordable, open source enclosure but couldn't find one, so I decided to build my own. 18 Months of hard work later, here we are! 
 
 ## Project Status
 
