@@ -10,10 +10,9 @@ The project started with me (Fabrizio), an aerospace engineering student who wan
 
 ## Support the Project on Kickstarter
 
-We are currently gearing up for the Kickstarter launch of the Clura Enclosure kit! If you are interested in supporting the project, please consider pledging on Kickstarter. This is your opportunity to get a complete enclosure kit at a discounted price, saving you the time and effort of self-sourcing all the components yourself.
+We have launched the Kickstarter for the Clura Enclosure kit! If you are interested in supporting the project, please consider pledging on Kickstarter. This is your opportunity to get a complete enclosure kit at a discounted price, saving you the time and effort of self-sourcing all the components yourself.
 
-**Guarantee an additional $20 off:** Reserve your Clura today with a $3.14 refundable deposit.
-[Reserve Yours](https://www.clura.dev/vipsignup) | [Check out the Kickstarter](https://www.kickstarter.com/projects/clura/enclosure)
+[Check out the Kickstarter](https://www.kickstarter.com/projects/clura/enclosure)
 
 ## Project Status
 
