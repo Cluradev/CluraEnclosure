@@ -17,7 +17,7 @@ We have launched the Kickstarter for the Clura Enclosure kit! If you are interes
 ## Project Status
 
 > [!NOTE]
-> **Files are currently being organized and will be uploaded soon.** We are working hard to prepare all CAD, firmware, and documentation for the initial release.
+> **Some Files are currently being organized and will be uploaded soon.** So if you don't find something you're looking for just email us to check if we made a mistake or if it's something that we are still preparing.
 
 
 ## Documentation
