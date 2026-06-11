@@ -24,7 +24,7 @@ We have launched the Kickstarter for the Clura Enclosure kit! If you are interes
 
 All project documentation, including assembly manuals and Bills of Materials (BOM), will also be published on **CluraDocs**. If you're looking to assemble your own Clura Enclosure, that is the place to go. Note: CluraDocs is still a work in progress, we are always working on improving it. If you have any suggestions or feedback, please let us know!
 
-Check it out here: [CluraDocs](https://www.clura.dev/cluradocs)
+Check it out here: [CluraDocs](https://docs.clura.dev/)
 
 ## Key Features
 
