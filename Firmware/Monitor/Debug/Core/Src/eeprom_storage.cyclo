@@ -1,0 +1,14 @@
+../Core/Src/eeprom_storage.cpp:39:13:void ms_to_cfg(const MachineState*, EepromConfig*)	1
+../Core/Src/eeprom_storage.cpp:110:13:void cfg_to_ms(const EepromConfig*, MachineState*)	1
+../Core/Src/eeprom_storage.cpp:179:6:bool EEPROM_IsValid()	3
+../Core/Src/eeprom_storage.cpp:188:9:uint8_t EEPROM_ScanAddress()	3
+../Core/Src/eeprom_storage.cpp:210:6:bool EEPROM_Format(MachineState*, char (*)[16], int*)	5
+../Core/Src/eeprom_storage.cpp:230:6:bool EEPROM_SaveConfig(MachineState*)	2
+../Core/Src/eeprom_storage.cpp:244:6:bool EEPROM_LoadConfig(MachineState*)	3
+../Core/Src/eeprom_storage.cpp:262:6:bool EEPROM_SaveFilamentData(char (*)[16], int*)	3
+../Core/Src/eeprom_storage.cpp:286:6:bool EEPROM_LoadFilamentData(char (*)[16], int*)	5
+../Core/Src/eeprom_storage.cpp:323:10:uint32_t EEPROM_NextBootId()	3
+../Core/Src/eeprom_storage.cpp:356:6:bool EEPROM_SaveUsage(uint32_t)	1
+../Core/Src/eeprom_storage.cpp:367:6:bool EEPROM_LoadUsage(uint32_t*)	5
+../Core/Src/eeprom_storage.cpp:395:6:bool EEPROM_SaveFilamentRev(uint32_t)	1
+../Core/Src/eeprom_storage.cpp:406:6:bool EEPROM_LoadFilamentRev(uint32_t*)	5

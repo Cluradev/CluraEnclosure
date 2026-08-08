@@ -1,0 +1,3 @@
+../Core/Src/AT24C_EEPROM.cpp:34:6:bool EEPROM_IsReady()	8	static
+../Core/Src/AT24C_EEPROM.cpp:43:19:HAL_StatusTypeDef EEPROM_Read(uint16_t, uint8_t*, uint16_t)	32	static
+../Core/Src/AT24C_EEPROM.cpp:57:19:HAL_StatusTypeDef EEPROM_Write(uint16_t, uint8_t*, uint16_t)	48	static

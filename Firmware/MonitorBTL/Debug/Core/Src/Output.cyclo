@@ -1,0 +1,6 @@
+../Core/Src/Output.cpp:7:1:Output::Output(GPIO_TypeDef*, uint16_t)	1
+../Core/Src/Output.cpp:11:6:void Output::begin()	1
+../Core/Src/Output.cpp:19:6:void Output::high()	1
+../Core/Src/Output.cpp:23:6:void Output::low()	1
+../Core/Src/Output.cpp:27:6:void Output::toggle()	1
+../Core/Src/Output.cpp:31:6:void Output::beep(uint8_t, uint16_t)	2

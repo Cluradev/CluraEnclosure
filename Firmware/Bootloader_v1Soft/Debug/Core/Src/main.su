@@ -1,0 +1,18 @@
+../Drivers/CMSIS/Include/core_cm4.h:1938:34:void __NVIC_SystemReset()	4	static,ignoring_inline_asm
+../Core/Src/main.cpp:71:19:int is_valid_msp(uint32_t)	16	static
+../Core/Src/main.cpp:115:13:void bootflag_write(uint32_t)	16	static
+../Core/Src/main.cpp:120:17:uint32_t bootflag_read()	16	static
+../Core/Src/main.cpp:126:13:void bootflag_clear()	8	static
+../Core/Src/main.cpp:131:13:void hmi_set_page(uint8_t)	40	static
+../Core/Src/main.cpp:147:13:bool app_is_valid()	16	static
+../Core/Src/main.cpp:163:17:uint32_t crc32_update(uint32_t, const uint8_t*, uint32_t)	32	static
+../Core/Src/main.cpp:174:17:void bootloaderStart(uint32_t)	32	static,ignoring_inline_asm
+../Core/Src/main.cpp:196:7:err_t checkFile(const char*)	1144	static
+../Core/Src/main.cpp:214:7:err_t deleteFile(const char*)	1144	static
+../Core/Src/main.cpp:253:6:fw_t flash_firmware_from_sd()	1728	static
+../Core/Src/main.cpp:395:5:int main()	1224	static
+../Core/Src/main.cpp:507:6:void SystemClock_Config()	88	static
+../Core/Src/main.cpp:554:13:void MX_SPI2_Init()	8	static
+../Core/Src/main.cpp:592:13:void MX_USART2_UART_Init()	8	static
+../Core/Src/main.cpp:625:13:void MX_GPIO_Init()	40	static
+../Core/Src/main.cpp:672:6:void Error_Handler()	4	static,ignoring_inline_asm

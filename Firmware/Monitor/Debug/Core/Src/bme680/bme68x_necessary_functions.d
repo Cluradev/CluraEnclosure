@@ -36,7 +36,7 @@ Core/Src/bme680/bme68x_necessary_functions.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Core/Inc/bme680/bme68x.h ../Core/Inc/bme680/bme68x_defs.h \
- C:/Users/fabri/Desktop/Clura\ Firmware\ smoke\ fixed/monitor/Core/Inc/bme680/../debug_utils.h
+ C:/Users/blasi/Desktop/MonitorChina/Monitor/Core/Inc/bme680/../debug_utils.h
 ../Core/Inc/bme680/bme68x_necessary_functions.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:
@@ -74,4 +74,4 @@ Core/Src/bme680/bme68x_necessary_functions.o: \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Core/Inc/bme680/bme68x.h:
 ../Core/Inc/bme680/bme68x_defs.h:
-C:/Users/fabri/Desktop/Clura\ Firmware\ smoke\ fixed/monitor/Core/Inc/bme680/../debug_utils.h:
+C:/Users/blasi/Desktop/MonitorChina/Monitor/Core/Inc/bme680/../debug_utils.h:

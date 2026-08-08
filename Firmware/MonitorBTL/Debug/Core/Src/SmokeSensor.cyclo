@@ -1,0 +1,4 @@
+../Core/Src/SmokeSensor.cpp:7:1:SmokeSensor::SmokeSensor(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t)	1
+../Core/Src/SmokeSensor.cpp:10:6:void SmokeSensor::begin()	1
+../Core/Src/SmokeSensor.cpp:25:6:bool SmokeSensor::isSmokeDetected()	1
+../Core/Src/SmokeSensor.cpp:30:6:void SmokeSensor::mute()	1

@@ -1,0 +1,104 @@
+# ═══════════════════════════════════════════════════════════════════════
+#  CLURA ENCLOSURE - machine tuning
+#  Copy this file to the root of the SD card.
+# ═══════════════════════════════════════════════════════════════════════
+#
+#  HOW IT WORKS
+#  ------------
+#  A board applies this file ONLY when configRevision is higher than the
+#  revision it last applied. So the card can stay in the machine
+#  permanently: it does nothing on every boot except the one right after
+#  you raise the number.
+#
+#  To push a change:
+#    1. edit the value(s) below
+#    2. RAISE configRevision (never reuse a number)
+#    3. power-cycle the board
+#
+#  To roll a value back: restore the old value AND raise configRevision.
+#
+#  NOTES
+#  -----
+#  * Keys not listed here keep their current value on the board.
+#  * Unknown keys are ignored. Malformed lines are skipped.
+#  * A file with no configRevision line is ignored completely.
+#  * Every value is clamped to the safe range shown in the comment
+#  * This file does NOT contain user settings (brightness, fan speeds,
+#    filament choice, load-cell calibration). Those live on the board and
+#    are never touched by this file.
+#
+# ═══════════════════════════════════════════════════════════════════════
+
+configRevision      = 3
+
+
+# ── Servo / flap ───────────────────────────────────────────────────────
+servoOpenAngle      = 5          # 1..90     deg, flap OPEN (also used on overtemp)
+servoCloseAngle     = 44         # 1..90     deg, flap CLOSED
+servoHoldMs         = 350        # 100..3000 ms driving before detaching
+servoTempHyst       = 3          # 1..10     deg C overtemp hysteresis
+
+# ── Safety ─────────────────────────────────────────────────────────────
+# Above maxTemp the flap is forced to servoOpenAngle and held there,
+# overriding the fan-page button, until the temperature drops below
+# (maxTemp - servoTempHyst). Requires the BME680 to be enabled.
+maxTemp             = 55         # 35..80    deg C, automatic flap-open
+
+# ── Smoke / gas ────────────────────────────────────────────────────────
+lpgThreshold        = 2000       # 100..4095   MQ2 raw ADC
+smokeThreshold      = 750       # 100..4095   MEMS raw ADC
+smokeBeginTime      = 300000     # 0..900000   ms warm-up before alarms arm
+countdownTime       = 5          # 1..60       s continue-button countdown
+
+# Optical smoke sensor -> alarm. 0 = deactivated (its signal is ignored).
+# The input has a pull-up and reads HIGH as "smoke", so an absent or
+# disconnected sensor floats high and would hold the alarm on permanently.
+# Set to 1 only once a working optical sensor is fitted.
+opticalAlarmEnable  = 0          # 0..1        0 = ignore optical sensor
+
+# Fire response. While smoke or gas is detected:
+#   * ALL fans stop (cooling, filter, extra) - no oxygen fed to a fire, no
+#     smoke pushed out through the filter
+#   * the flap CLOSES, and this outranks the overtemp vent-open below
+# So: hot with no smoke -> flap opens to vent heat.
+#     hot WITH smoke     -> flap closes and every fan stops.
+# Overrides auto and manual fan control, and is unaffected by muting the
+# buzzer. 1 = enabled.
+smokeFireResponse   = 1          # 0..1        1 = fans off + flap shut on smoke
+
+# ── Auto cooling ───────────────────────────────────────────────────────
+autoCoolTempMin     = 20         # 0..60     deg C -> 0 % fan
+autoCoolTempMax     = 40         # 0..60     deg C -> 100 % fan
+
+# ── Fans ───────────────────────────────────────────────────────────────
+# The extra ("regulated") fan is on/off from the screen; this sets how hard
+# it runs when on. It was previously capped at ~15 % by a scaling bug, so
+# expect it to be noticeably stronger and louder now.
+extraFanSpeed       = 75         # 0..100    %
+
+# ── Auto filtering ─────────────────────────────────────────────────────
+autoFilterImpMin    = 5          # 0..1000
+autoFilterImpMax    = 100        # 0..1000
+autoFilterP03Min    = 100        # 0..10000
+autoFilterP03Max    = 2000       # 0..10000
+
+# ── Intervals / display ────────────────────────────────────────────────
+bmeSampleInterval   = 5000       # 1000..60000    ms between BME680 reads
+usageLogInterval    = 900000     # 60000..3600000 ms between usage saves (EEPROM wear)
+# Filter/sensor replacement warning, in HOURS of filter-fan runtime - the
+# same figure the settings page shows. 600 h = 25 days of running.
+sensorUsageWarnHours = 600       # 0..20000       runtime hours -> replace icon
+minBrightness       = 15         # 5..100         lowest screen brightness
+
+# ── Load-cell factory seeds ────────────────────────────────────────────
+# Applied at boot ONLY while the board reports calibrationComplete = false,
+# i.e. it has never finished the calibration wizard. Once a unit is
+# calibrated the flag latches and its measured factors are kept forever -
+# changing these will NOT disturb an already calibrated machine.
+# They are also what the "restore defaults" button on the selector page
+# writes back.
+defaultLeftCal      = 740
+defaultRightCal     = 740
+defaultLeftOffset   = 8483528
+defaultRightOffset  = 8483528
+tareWeight          = 1000       # 0..100000  g, empty spool weight

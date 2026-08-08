@@ -1,0 +1,23 @@
+# CLURA filament library
+# Raise filamentRevision to push this list to a board.
+
+filamentRevision = 1
+filamentCount    = 15
+
+filament0  = Sunlu,134
+filament1  = Prusament,198
+filament2  = Bambu Lab,226
+filament3  = eSUN,224
+filament4  = PolyMaker,194
+filament5  = ProtoPasta,80
+filament6  = Overture,200
+filament7  = Hatchbox,225
+filament8  = Amazon Basics,212
+filament9  = Colorfabb,202
+filament10 = Matter Hackers,215
+filament11 = Inland,178
+filament12 = FormFutura,184
+filament13 = 3D Jake,221
+filament14 = GST3D,206
+filament15 = Voxel,171
+
