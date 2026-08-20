@@ -8,11 +8,13 @@
 
 The project started with me (Fabrizio), an aerospace engineering student who wanted to print in his room without compromising his safety. In fact, it is widely documented that most 3D printer filaments emit VOCs and particulate matter, which can be harmful to health. I searched for a smart, affordable, open-source enclosure but couldn't find one, so I decided to build my own. 18 months of hard work later, here we are!
 
-## Support the Project on Kickstarter
+## Kits
 
-We have launched the Kickstarter for the Clura Enclosure kit! If you are interested in supporting the project, please consider pledging on Kickstarter. This is your opportunity to get a complete enclosure kit at a discounted price, saving you the time and effort of self-sourcing all the components yourself.
+Kickstarter orders are being fulfilled. Future kit batches are being planned, but nothing is finalized yet, so there is no ordering page and no dates to give.
 
-[Check out the Kickstarter](https://www.kickstarter.com/projects/clura/enclosure)
+You can still build the enclosure today without waiting on us. Everything here is open source and the [Bill of Materials](Documentation/README.md) lists every part with supplier links, so nothing is gated behind a kit.
+
+The original campaign page is still up for reference: [Kickstarter](https://www.kickstarter.com/projects/clura/enclosure)
 
 ## Project Status
 
@@ -24,7 +26,7 @@ We have launched the Kickstarter for the Clura Enclosure kit! If you are interes
 
 All project documentation, including assembly manuals and Bills of Materials (BOM), will also be published on **CluraDocs**. If you're looking to assemble your own Clura Enclosure, that is the place to go. Note: CluraDocs is still a work in progress, we are always working on improving it. If you have any suggestions or feedback, please let us know!
 
-Check it out here: [CluraDocs](https://www.clura.dev/cluradocs)
+Check it out here: [CluraDocs](https://docs.clura.dev)
 
 ## Key Features
 
@@ -37,16 +39,20 @@ Check it out here: [CluraDocs](https://www.clura.dev/cluradocs)
 
 ## Repository Structure
 
-- `Documentation/`: Manuals and BOM.
-- `Firmware/`: Firmware for the screen and PCB controller.
-- `CAD/`: CAD models for various components (PE1, ME1, BE1).
-- `Production/`: Ready-to-use production files (3D prints, laser cutting, extrusions, PCBs).
+- `Documentation/`: Assembly manual and BOM.
+- `Firmware/`: Firmware for the screen and the mainboard, plus the SD card files.
+- `CAD/`: STEP models of the full enclosure, one per size (PE1, BE1, ME1).
+- `PCBs/`: KiCad 9 sources for the mainboard and the sensorboard.
+- `Production/`: Ready-to-use production files (laser cutting, extrusions, metal plates, PCB gerbers).
+- `3D Printable Files/`: The `.3mf` files you print yourself.
 
 In each folder there is a readme file with more info.
 
+> For the printable parts, [CluraDocs](https://docs.clura.dev/the-build/preparations/printed-parts) has a picker that works out exactly which files and quantities your build needs.
+
 ## License
 
-Every file in this repository is released under the **CC-NC (Creative Commons Non-Commercial)** license. 
+Every file in this repository is released under the **CC BY-NC (Creative Commons Attribution-NonCommercial)** license. 
 
 For more details on the reasoning behind this choice, you can read our blog post: [The License - Clura Blog](https://www.clura.dev/blog/the-license)
 

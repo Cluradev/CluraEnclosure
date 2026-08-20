@@ -1,0 +1,24 @@
+# KiCad temporary / local files
+*.kicad_prl
+*-backups/
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pro-bak
+*.bak
+*~
+_autosave-*
+*.lck
+fp-info-cache
+*.net
+
+# KiCad generated output
+*.dsn
+*.ses
+*.xml
+*-erc.rpt
+*-drc.rpt
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini

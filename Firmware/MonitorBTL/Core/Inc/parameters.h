@@ -59,7 +59,8 @@
 #define AUTOFILTER_P03_MIN 100
 #define AUTOFILTER_P03_MAX 2000
 /* Filter/sensor replacement warning, in HOURS of filter-fan runtime.
- * Expressed in hours to match the usage figure shown on the settings page */
+ * Expressed in hours to match the usage figure shown on the settings page
+ * (which divides usage_minutes by 60). 300 h = the previous 18000 min. */
 #define SENSOR_USAGE_WARNING_HOURS 600
 
 #define BME_SAMPLE_INTERVAL 5000

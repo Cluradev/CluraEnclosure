@@ -843,6 +843,18 @@ void runMachine() {
 		tjc.off();
 	}
 	
+	/* Environmental sampling. This must run on EVERY pass, not only while the
+	 * Home or Sensors page happens to be open. ms.temperature feeds the overtemp
+	 * cutout in applyServoControl() below, the auto-cooling ramp, and the CSV
+	 * log. Sampling from inside the page handlers meant the reading froze the
+	 * moment the user navigated away - or the screen dimmed on some other page -
+	 * so the enclosure could heat past maxTemp with the flap shut and never
+	 * notice. The page handlers now only display whatever the latest value is. */
+	if (ms.useBme && HAL_GetTick() - BME_Timestamp >= g_tune.bmeSampleInterval) {
+		readBme();
+		BME_Timestamp = HAL_GetTick();
+	}
+
 	// Safety feature: Automatic flap opening if temperature exceeds g_tune.maxTemp
 	// This overrides all other servo commands
 	applyServoControl();
@@ -953,10 +965,6 @@ void runMachine() {
 	}
 
 	if (ms.currentPage == HOMESCREEN) {
-		if (HAL_GetTick() - BME_Timestamp >= g_tune.bmeSampleInterval && ms.useBme) {
-				readBme();
-				BME_Timestamp = HAL_GetTick();
-			}
 
 		if ((last_pm2 != ms.pm2)
 				|| (last_temperature != ms.temperature || refreshFlag)
@@ -1003,10 +1011,6 @@ void runMachine() {
 	}
 
 	if (ms.currentPage == SENSORS) {
-		if (HAL_GetTick() - BME_Timestamp >= g_tune.bmeSampleInterval && ms.useBme) {
-				readBme();
-				BME_Timestamp = HAL_GetTick();
-			}
 
 		if ((last_pm2 != ms.pm2) || forceUpdate) {
 			last_pm2 = ms.pm2;
@@ -1036,19 +1040,21 @@ void runMachine() {
 			tjc.setVal("n1", ms.HumidityBME);
 		}
 
+		/* These three used to be nested inside the MQ-2 check, so the MEMS value
+		 * and the Smoke/Clear text could only be redrawn on a pass where the MQ-2
+		 * reading had ALSO changed. A steady MQ-2 froze both on screen. They are
+		 * independent fields, so they get independent checks. */
 		if ((last_mqSmokeValue != ms.mqSmokeValue) || forceUpdate) {
 			last_mqSmokeValue = ms.mqSmokeValue;
 			tjc.setVal("n3", ms.mqSmokeValue);
-
-			if ((last_memsSmokeValue != ms.memsSmokeValue) || forceUpdate) {
-				last_memsSmokeValue = ms.memsSmokeValue;
-				tjc.setVal("n7", ms.memsSmokeValue);
-			}
-			if (lastSmoke != opticalSmokeActive() || forceUpdate) {
-				opticalSmokeActive() ?
-						tjc.setText("t0", "Smoke") : tjc.setText("t0", "Clear");
-				lastSmoke = opticalSmokeActive();
-			}
+		}
+		if ((last_memsSmokeValue != ms.memsSmokeValue) || forceUpdate) {
+			last_memsSmokeValue = ms.memsSmokeValue;
+			tjc.setVal("n7", ms.memsSmokeValue);
+		}
+		if (lastSmoke != opticalSmokeActive() || forceUpdate) {
+			lastSmoke = opticalSmokeActive();
+			lastSmoke ? tjc.setText("t0", "Smoke") : tjc.setText("t0", "Clear");
 		}
 
 		if (lastLogging != ms.logging || forceUpdate) {
@@ -1575,7 +1581,14 @@ void handleConfig(ScreenEvent event) {
 		ms.useLoadCell = true;
 		ms.useMems = true;
 		ms.useMq2 = true;
-		ms.useOptical = true;
+		/* No optical smoke sensor ships with any kit, including Pro - it is an
+		 * optional part the user fits themselves. Enabling it here made the
+		 * System Check fail and the Sensors page read "Smoke" on every Pro
+		 * build, because the input is pulled high and floats when nothing is
+		 * connected. Anyone who does fit one turns it on from the Custom
+		 * feature page (and sets opticalAlarmEnable = 1 in data.clu to arm the
+		 * alarm - that gate is separate and stays off by default). */
+		ms.useOptical = false;
 		ms.usePms = true;
 		break;
 	case 4:
@@ -2357,7 +2370,20 @@ bool readBme() {
 			ms.HumidityBME = data.humidity;
 			ms.pressure = data.pressure;
 			ms.temperature = data.temperature;
-			bme68x_GetGasReference();
+			/* bme68x_GetGasReference() used to be called here on EVERY read. It
+			 * runs 10 further forced-mode measurements in a blocking loop, so at
+			 * heatr_dur = 150 ms one readBme() cost ~11 measurements and stalled
+			 * the main loop for well over a second. applyServoControl() re-asserts
+			 * the servo pulse once per pass and detaches servoHoldMs after the
+			 * move, so that stall stretched the drive window and delayed detach.
+			 *
+			 * bme68x_iaq() below already refreshes the reference on its own 1-in-5
+			 * schedule, and getgasreference_count starts at 0 so the first call
+			 * still establishes it. gas_reference also seeds to 250000 rather than
+			 * 0, so nothing reads an unset value in the meantime.
+			 *
+			 * GetHumidityScore()/GetGasScore() are recomputed inside bme68x_iaq()
+			 * too, but they are pure arithmetic with no I2C, so they are left. */
 			bme68x_GetHumidityScore();
 			bme68x_GetGasScore();
 			data.iaq_score = bme68x_iaq();  // Calculate IAQ
