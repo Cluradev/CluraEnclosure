@@ -14,6 +14,8 @@ build/
 bin/
 *.hex
 *.bin
+# ...but keep the release binary flashed from the SD card
+!Firmware/SD Card files/monitor.bin
 *.elf
 *.map
 
