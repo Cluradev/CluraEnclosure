@@ -2,6 +2,8 @@
 
 **The Clura Enclosure** is the 100% open-source, modular, and smart enclosure designed for desktop 3D printers. Developed with a focus on safety and air quality, it incorporates active filtration and smart sensors to enhance your 3D printing experience.
 
+[Discord Community](https://discord.gg/dJDUmdvcgZ)
+
 ![Clura Enclosure](IntroPicture.avif)
 
 ## Why We Built It
@@ -10,16 +12,11 @@ The project started with me (Fabrizio), an aerospace engineering student who wan
 
 ## Kits
 
-Kickstarter orders are being fulfilled. Future kit batches are being planned, but nothing is finalized yet, so there is no ordering page and no dates to give.
+Kickstarter orders are being fulfilled. Future kit batches are being planned, but nothing is finalized yet.
 
-You can still build the enclosure today without waiting on us. Everything here is open source and the [Bill of Materials](Documentation/README.md) lists every part with supplier links, so nothing is gated behind a kit.
+You can still build the enclosure today without waiting on us. Everything here is open source and the [Bill of Materials](Documentation/README.md) lists every part with soemtimes supplier links.
 
 The original campaign page is still up for reference: [Kickstarter](https://www.kickstarter.com/projects/clura/enclosure)
-
-## Project Status
-
-> [!NOTE]
-> **Some Files are currently being organized and will be uploaded soon.** So if you don't find something you're looking for just email us to check if we made a mistake or if it's something that we are still preparing.
 
 
 ## Documentation
