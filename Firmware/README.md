@@ -56,8 +56,8 @@ It lets you retune a machine without rebuilding the firmware.
 **Format**: Plain text, `key = value`, one per line. `#` starts a comment.
 
 > **This file is read-only from the enclosure's point of view.** It is never written or
-> updated by the machine. Your day-to-day settings - brightness, fan speeds, filament
-> choice, calibration - live in the enclosure's internal memory and are **not** in this
+> updated by the machine. Your day-to-day settings (brightness, fan speeds, filament
+> choice, calibration) live in the enclosure's internal memory and are **not** in this
 > file. That separation is deliberate: it means the card can stay in the machine
 > permanently without ever overwriting what you set on the touchscreen.
 

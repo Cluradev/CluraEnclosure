@@ -80,10 +80,10 @@ Three sizes are available. Pick the folder that matches your enclosure and use o
 `DXF` holds the flat cutting profiles, one file per panel type. Send these to the laser cutting shop. `Drawings` holds the matching PDF drawings so you can check dimensions and part count before ordering. Clear panels are 4 mm, black electronics panels are 3 mm.
 
 **Extrusions**
-All parts use 2020 aluminium profile. `Step` holds the 3D model of each cut length, `Drawings` holds the PDF with the length, the tapped ends and the drilled holes. The `2020R` files are the rounded profile version.
+All parts use 2020 aluminium profile. `Step` holds the 3D model of each cut length, `Drawings` holds the PDF with the length, the tapped ends and the drilled holes. The `2020R` files are the rounded profile version. (they are not essential)
 
 **Bottom metal plate**
-1.5 mm steel plate, supplied as DXF for cutting, STEP for reference and PDF for checking. Available for PE1 and BE1. The ME1 plate is not published yet.
+1.5 mm steel plate, supplied as DXF for cutting, STEP for reference and PDF for checking. Available for PE1 and BE1. 
 
 ### General Parts
 
@@ -106,7 +106,3 @@ Thin 0.5 mm steel plates that the magnets hold on to. Three screen plates (left,
 * **`PCBs/`** - KiCad 9 sources for the mainboard and the sensorboard, if you want to modify
   them rather than just have them made.
 
-## Coming soon
-
-* Pre-sliced print files
-* ME1 bottom metal plate

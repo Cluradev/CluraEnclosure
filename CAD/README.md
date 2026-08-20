@@ -14,4 +14,3 @@ These are reference models of the complete enclosure. The files you actually fab
 
 ![Models](DimensionsModels.avif)
 
-> **Note:** CAD files for the ME1 are currently being finalized and will be uploaded shortly.
